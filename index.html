@@ -1,0 +1,682 @@
+<!doctype html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ahmed Adel Allam — Bioinformatics Researcher</title>
+  <meta name="description" content="Ahmed Adel Allam — MSc student in Biotechnology at The American University in Cairo, working on transcriptomics in neuroscience.">
+  <meta name="author" content="Ahmed Adel Allam">
+  <meta property="og:type" content="profile">
+  <meta property="og:title" content="Ahmed Adel Allam — Bioinformatics Researcher">
+  <meta property="og:description" content="Bioinformatician, writer and builder. MSc student in Biotechnology at The American University in Cairo, working on transcriptomics in neuroscience.">
+  <meta property="og:url" content="https://ahmed-a-allam.github.io/">
+  <meta name="theme-color" content="#ffffff">
+  <script>
+    /* Runs before the CSS paints: apply the saved theme (or the device preference) and language.
+       Storage access is wrapped in try/catch so the page still works when storage is blocked. */
+    (function () {
+      var d = document.documentElement, t = null, l = null;
+      var colors = { light: "#ffffff", dark: "#0d1418", sepia: "#f5ecd7", ocean: "#06202c", contrast: "#ffffff" };
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      try { l = localStorage.getItem("lang"); } catch (e) {}
+      if (!colors.hasOwnProperty(t)) {
+        t = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      d.setAttribute("data-theme", t);
+      var m = document.querySelector('meta[name="theme-color"]');
+      if (m) { m.setAttribute("content", colors[t]); }
+      if (l === "ar") { d.lang = "ar"; d.dir = "rtl"; }
+    })();
+  </script>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230f3d4c'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Arial,sans-serif' font-size='28' font-weight='700' fill='%23ffffff'%3EAA%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Ahmed Adel Allam",
+    "jobTitle": "MSc Student, Bioinformatics & Biotechnology",
+    "affiliation": { "@type": "CollegeOrUniversity", "name": "The American University in Cairo" },
+    "email": "mailto:ahmedadelallam@aucegypt.edu",
+    "url": "https://ahmed-a-allam.github.io/",
+    "sameAs": [
+      "https://www.linkedin.com/in/ahmed-a-allam97/",
+      "https://github.com/ahmed-a-allam",
+      "https://orcid.org/0009-0001-4143-9496"
+    ]
+  }
+  </script>
+</head>
+<body>
+  <a class="skip-link" href="#main">
+    <span data-lang="en">Skip to content</span><span data-lang="ar">انتقل إلى المحتوى</span>
+  </a>
+
+  <!-- ============================== HEADER ============================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#top" aria-label="Ahmed Adel Allam — home">
+        <span class="brand-mark" aria-hidden="true">AA</span>
+        <span class="brand-name">
+          <span data-lang="en">Ahmed Adel Allam</span><span data-lang="ar">أحمد عادل علّام</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" aria-label="Main">
+        <a href="#about"><span data-lang="en">About</span><span data-lang="ar">نبذة</span></a>
+        <a href="#research"><span data-lang="en">Research</span><span data-lang="ar">الأبحاث</span></a>
+        <a href="#projects"><span data-lang="en">Projects</span><span data-lang="ar">المشاريع</span></a>
+        <a href="#apps"><span data-lang="en">Apps &amp; Tools</span><span data-lang="ar">التطبيقات والأدوات</span></a>
+        <a href="#writing"><span data-lang="en">Writing</span><span data-lang="ar">الكتابة</span></a>
+        <a href="#contact"><span data-lang="en">Contact</span><span data-lang="ar">تواصل</span></a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="theme-switcher">
+          <button class="theme-toggle" id="theme-toggle" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="theme-menu" aria-label="Change theme" title="Change theme">
+            <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.5" fill="none" stroke="currentColor" stroke-width="1.8"/><path d="M12 3.5a8.5 8.5 0 0 1 0 17z" fill="currentColor"/></svg>
+          </button>
+          <ul class="theme-menu" id="theme-menu" role="menu" aria-label="Theme" hidden>
+            <li role="none">
+              <button type="button" role="menuitemradio" aria-checked="false" data-theme-value="light" tabindex="-1">
+                <span class="swatch swatch-light" aria-hidden="true"></span>
+                <span class="tm-label"><span data-lang="en">Light</span><span data-lang="ar">فاتح</span></span>
+                <svg class="tm-check" aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" role="menuitemradio" aria-checked="false" data-theme-value="dark" tabindex="-1">
+                <span class="swatch swatch-dark" aria-hidden="true"></span>
+                <span class="tm-label"><span data-lang="en">Dark</span><span data-lang="ar">داكن</span></span>
+                <svg class="tm-check" aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" role="menuitemradio" aria-checked="false" data-theme-value="sepia" tabindex="-1">
+                <span class="swatch swatch-sepia" aria-hidden="true"></span>
+                <span class="tm-label"><span data-lang="en">Sepia</span><span data-lang="ar">سيبيا</span></span>
+                <svg class="tm-check" aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" role="menuitemradio" aria-checked="false" data-theme-value="ocean" tabindex="-1">
+                <span class="swatch swatch-ocean" aria-hidden="true"></span>
+                <span class="tm-label"><span data-lang="en">Ocean</span><span data-lang="ar">المحيط</span></span>
+                <svg class="tm-check" aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" role="menuitemradio" aria-checked="false" data-theme-value="contrast" tabindex="-1">
+                <span class="swatch swatch-contrast" aria-hidden="true"></span>
+                <span class="tm-label"><span data-lang="en">High Contrast</span><span data-lang="ar">تباين عالٍ</span></span>
+                <svg class="tm-check" aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </li>
+          </ul>
+        </div>
+
+        <button class="lang-toggle" id="lang-toggle" type="button" aria-label="عرض الموقع باللغة العربية">
+          <span data-lang="en" lang="ar">العربية</span><span data-lang="ar" lang="en">English</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ============================== HERO ============================== -->
+    <section class="hero" id="top">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="eyebrow">
+            <span data-lang="en">Bioinformatician · Writer · Builder</span>
+            <span data-lang="ar">باحث في المعلوماتية الحيوية · كاتب · مطوّر برمجيات</span>
+          </p>
+          <h1>
+            <span data-lang="en">Ahmed Adel Allam</span><span data-lang="ar">أحمد عادل علّام</span>
+          </h1>
+          <p class="lead" data-lang="en">
+            MSc student in Biotechnology at The American University in Cairo, working on transcriptomics in neuroscience.
+            I also write, and build apps and tools with AI-assisted coding.
+          </p>
+          <p class="lead" data-lang="ar">
+            طالب ماجستير في التكنولوجيا الحيوية بالجامعة الأمريكية بالقاهرة، أعمل في مجال علم النسخ الجيني في علم الأعصاب.
+            كما أكتب، وأطوّر تطبيقات وأدوات برمجية بالاستعانة بالذكاء الاصطناعي.
+          </p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#contact">
+              <span data-lang="en">Get in touch</span><span data-lang="ar">تواصل معي</span>
+            </a>
+            <a class="btn btn-ghost" href="#research">
+              <span data-lang="en">View research</span><span data-lang="ar">استعرض الأبحاث</span>
+            </a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Quick facts">
+          <dl>
+            <div>
+              <dt><span data-lang="en">Currently</span><span data-lang="ar">حاليًا</span></dt>
+              <dd>
+                <span data-lang="en">MSc Biotechnology, AUC — expected Fall 2026</span>
+                <span data-lang="ar">ماجستير التكنولوجيا الحيوية، الجامعة الأمريكية بالقاهرة — التخرج المتوقع خريف 2026</span>
+              </dd>
+            </div>
+            <div>
+              <dt><span data-lang="en">Focus</span><span data-lang="ar">مجال التركيز</span></dt>
+              <dd>
+                <span data-lang="en">Transcriptomics in neuroscience</span>
+                <span data-lang="ar">علم النسخ الجيني في علم الأعصاب</span>
+              </dd>
+            </div>
+            <div>
+              <dt><span data-lang="en">Toolkit</span><span data-lang="ar">الأدوات</span></dt>
+              <dd dir="ltr">R · Python · Bash · DESeq2 · edgeR</dd>
+            </div>
+          </dl>
+        </aside>
+      </div>
+    </section>
+
+    <!-- ============================== ABOUT ============================== -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">01</p>
+          <h2 id="about-title"><span data-lang="en">About</span><span data-lang="ar">نبذة عني</span></h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="prose">
+            <p data-lang="en">
+              I am an interdisciplinary researcher combining <strong>bioinformatics</strong> with hands-on
+              <strong>wet-lab molecular biology</strong>. My current work focuses on transcriptomics in neuroscience.
+            </p>
+            <p data-lang="en">
+              I have multiple peer-reviewed publications, and I bring experience in
+              teaching, mentoring and health-economic modelling. I am seeking research roles in
+              <strong>computational biology and bioinformatics</strong>, where my experimental background is an added strength.
+            </p>
+            <p data-lang="ar">
+              باحث متعدد التخصصات أجمع بين <strong>المعلوماتية الحيوية</strong> والخبرة العملية في
+              <strong>البيولوجيا الجزيئية المعملية</strong>. يتركز عملي الحالي على علم النسخ الجيني في علم الأعصاب.
+            </p>
+            <p data-lang="ar">
+              لديّ عدة منشورات في دوريات محكّمة، كما أن لديّ خبرة في التدريس
+              والإرشاد الأكاديمي ونمذجة الاقتصاد الصحي. أتطلع إلى أدوار بحثية في <strong>البيولوجيا الحاسوبية والمعلوماتية الحيوية</strong>،
+              حيث تمثّل خلفيتي التجريبية قيمة مضافة.
+            </p>
+
+            <h3><span data-lang="en">Experience</span><span data-lang="ar">الخبرات</span></h3>
+            <ol class="timeline">
+              <li>
+                <p class="tl-meta"><span data-lang="en">Feb 2025 – Aug 2025 · Remote</span><span data-lang="ar">فبراير 2025 – أغسطس 2025 · عن بُعد</span></p>
+                <p class="tl-title">
+                  <span data-lang="en">Medical Researcher — Health Economic Modelling, Stellar</span>
+                  <span data-lang="ar">باحث طبي — نمذجة الاقتصاد الصحي، <bdi>Stellar</bdi></span>
+                </p>
+                <p data-lang="en">Built cost-effectiveness and budget-impact models in Python and Excel (macros), ran scenario analyses, prepared HTA-aligned documentation and collaborated with epidemiology and market-access teams across MENA.</p>
+                <p data-lang="ar">بناء نماذج فعالية التكلفة وتأثير الميزانية باستخدام <bdi>Python</bdi> و<bdi>Excel</bdi> (وحدات الماكرو)، وإجراء تحليلات السيناريوهات، وإعداد وثائق متوافقة مع معايير تقييم التقنيات الصحية (<bdi>HTA</bdi>)، والتعاون مع فرق الوبائيات والنفاذ إلى الأسواق في منطقة الشرق الأوسط وشمال أفريقيا.</p>
+              </li>
+              <li>
+                <p class="tl-meta"><span data-lang="en">Feb 2024 – Jun 2024</span><span data-lang="ar">فبراير 2024 – يونيو 2024</span></p>
+                <p class="tl-title">
+                  <span data-lang="en">Teaching Assistant — Dept. of Biology, The American University in Cairo</span>
+                  <span data-lang="ar">مساعد تدريس — قسم الأحياء، الجامعة الأمريكية بالقاهرة</span>
+                </p>
+                <p data-lang="en">Led molecular biology tutorials and laboratory sessions for undergraduate courses, supported pilot wet-lab experiments and mentored students in experimental techniques.</p>
+                <p data-lang="ar">قيادة الحصص التعليمية والجلسات المعملية في البيولوجيا الجزيئية لطلاب المرحلة الجامعية، والمساعدة في التجارب المعملية التمهيدية، وإرشاد الطلاب في التقنيات التجريبية.</p>
+              </li>
+            </ol>
+
+            <h3><span data-lang="en">Education</span><span data-lang="ar">التعليم</span></h3>
+            <ol class="timeline">
+              <li>
+                <p class="tl-meta"><span data-lang="en">Expected Fall 2026</span><span data-lang="ar">التخرج المتوقع خريف 2026</span></p>
+                <p class="tl-title">
+                  <span data-lang="en">MSc in Biotechnology — The American University in Cairo</span>
+                  <span data-lang="ar">ماجستير التكنولوجيا الحيوية — الجامعة الأمريكية بالقاهرة</span>
+                </p>
+                <p data-lang="en">Fellowships: Laboratory Instruction Fellowship (2026) · Egyptian University Fellowship (2022–2024) · English Support Fellowship (2021).</p>
+                <p data-lang="ar">المنح: منحة التدريس المعملي (2026) · منحة الجامعات المصرية (2022–2024) · منحة دعم اللغة الإنجليزية (2021).</p>
+              </li>
+              <li>
+                <p class="tl-meta">2022</p>
+                <p class="tl-title">
+                  <span data-lang="en">Diploma in Genomics &amp; Bioinformatics — Faculty of Pharmacy, Cairo University</span>
+                  <span data-lang="ar">دبلوم علم الجينوم والمعلوماتية الحيوية — كلية الصيدلة، جامعة القاهرة</span>
+                </p>
+              </li>
+              <li>
+                <p class="tl-meta">2019</p>
+                <p class="tl-title">
+                  <span data-lang="en">BSc in Biotechnology (Hons) — Misr University for Science &amp; Technology</span>
+                  <span data-lang="ar">بكالوريوس التكنولوجيا الحيوية (مع مرتبة الشرف) — جامعة مصر للعلوم والتكنولوجيا</span>
+                </p>
+              </li>
+            </ol>
+          </div>
+
+          <aside class="skills" aria-labelledby="skills-title">
+            <h3 id="skills-title"><span data-lang="en">Skills</span><span data-lang="ar">المهارات</span></h3>
+
+            <div class="skill-group">
+              <h4><span data-lang="en">NGS &amp; data analysis</span><span data-lang="ar">تحليل بيانات التسلسل الجيني</span></h4>
+              <ul class="tags" dir="ltr">
+                <li>RNA-seq</li><li>DGEA (DESeq2, edgeR)</li><li>Microarray</li><li>16S rRNA / microbiome</li><li>Multi-omics integration</li><li>Systems biology</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4><span data-lang="en">Bioinformatics tools</span><span data-lang="ar">أدوات المعلوماتية الحيوية</span></h4>
+              <ul class="tags" dir="ltr">
+                <li>BLAST</li><li>Pairwise alignment</li><li>MOTHUR</li><li>DAVID</li><li>ToppGene</li><li>KEGG / GO</li><li>Cytoscape</li><li>MOE (docking)</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4><span data-lang="en">Programming</span><span data-lang="ar">البرمجة</span></h4>
+              <ul class="tags" dir="ltr">
+                <li>R</li><li>Python (pandas, NumPy, Matplotlib)</li><li>Bash</li><li>Google Colab</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4><span data-lang="en">Statistics &amp; visualisation</span><span data-lang="ar">الإحصاء وتمثيل البيانات</span></h4>
+              <ul class="tags" dir="ltr">
+                <li>STATA</li><li>Volcano plots</li><li>Heatmaps</li><li>Clustering</li><li>Enrichment analysis</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4><span data-lang="en">Wet lab</span><span data-lang="ar">العمل المعملي</span></h4>
+              <ul class="tags" dir="ltr">
+                <li>DNA extraction</li><li>PCR / qPCR</li><li>Gel electrophoresis</li><li>Bacterial cloning</li><li>Transformation</li><li>Western blot</li><li>Cell culture</li><li>Migration assays</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4><span data-lang="en">Online courses</span><span data-lang="ar">الدورات الإلكترونية</span></h4>
+              <ul class="tags" dir="ltr">
+                <li>Johns Hopkins University</li><li>École Polytechnique</li>
+              </ul>
+            </div>
+            <div class="skill-group">
+              <h4><span data-lang="en">Languages</span><span data-lang="ar">اللغات</span></h4>
+              <ul class="tags">
+                <li><span data-lang="en">Arabic</span><span data-lang="ar">العربية</span></li>
+                <li><span data-lang="en">English</span><span data-lang="ar">الإنجليزية</span></li>
+              </ul>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== RESEARCH ============================== -->
+    <section class="section section-alt" id="research" aria-labelledby="research-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">02</p>
+          <h2 id="research-title"><span data-lang="en">Research</span><span data-lang="ar">الأبحاث</span></h2>
+        </header>
+
+        <article class="feature">
+          <p class="feature-label"><span data-lang="en">MSc research · in progress</span><span data-lang="ar">بحث الماجستير · قيد الإنجاز</span></p>
+          <p data-lang="en">My MSc research at The American University in Cairo focuses on transcriptomics in neuroscience.</p>
+          <p data-lang="ar">يتركز بحثي في الماجستير بالجامعة الأمريكية بالقاهرة على علم النسخ الجيني في علم الأعصاب.</p>
+          <p class="feature-note"><span data-lang="en">More details will be shared after publication.</span><span data-lang="ar">ستُتاح تفاصيل إضافية بعد النشر.</span></p>
+        </article>
+
+        <div class="pubs">
+          <h3><span data-lang="en">Selected publications</span><span data-lang="ar">منشورات مختارة</span></h3>
+          <ol class="pub-list">
+            <li dir="ltr">
+              <p class="pub-title">Depression in Geriatrics: A Systematic Review and Meta-Analysis of Prevalence and Risk Factors in Egypt</p>
+              <p class="pub-meta"><strong>Allam AA</strong>, et al. · <em>BMC Geriatrics</em> ·
+                <a href="https://doi.org/10.1186/s12877-024-05484-2" target="_blank" rel="noopener">doi:10.1186/s12877-024-05484-2</a></p>
+            </li>
+            <li dir="ltr">
+              <p class="pub-title">HBV Reactivation in Patients Receiving Bruton Tyrosine Kinase Inhibitors (BTKIs): A Systematic Review and Meta-Analysis</p>
+              <p class="pub-meta"><strong>Allam AA</strong>, et al. · <em>Current Infectious Disease Reports</em> ·
+                <a href="https://doi.org/10.1007/s11908-023-00827-3" target="_blank" rel="noopener">doi:10.1007/s11908-023-00827-3</a></p>
+            </li>
+          </ol>
+          <p class="pubs-more">
+            <span data-lang="en">Full list:</span><span data-lang="ar">القائمة الكاملة:</span>
+            <a href="https://orcid.org/0009-0001-4143-9496" target="_blank" rel="noopener">ORCID</a>
+            ·
+            <span class="ph">
+              <span data-lang="en">[PLACEHOLDER: Google Scholar profile link]</span>
+              <span data-lang="ar">[عنصر نائب: رابط <bdi>Google Scholar</bdi>]</span>
+            </span>
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== PROJECTS ============================== -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">03</p>
+          <h2 id="projects-title"><span data-lang="en">Projects</span><span data-lang="ar">المشاريع</span></h2>
+        </header>
+
+        <div class="cards">
+
+          <article class="card">
+            <p class="card-meta"><span data-lang="en">MSc · AUC</span><span data-lang="ar">ماجستير · الجامعة الأمريكية بالقاهرة</span></p>
+            <h3><span data-lang="en">HDAC1 expression analysis</span><span data-lang="ar">تحليل التعبير الجيني لـ <bdi>HDAC1</bdi></span></h3>
+            <p data-lang="en">RNA-seq analysis of HDAC1-associated expression changes, with clustering and functional enrichment using DAVID and ToppGene.</p>
+            <p data-lang="ar">تحليل بيانات <bdi>RNA-seq</bdi> لتغيرات التعبير الجيني المرتبطة بـ <bdi>HDAC1</bdi>، مع التجميع العنقودي والإثراء الوظيفي باستخدام <bdi>DAVID</bdi> و<bdi>ToppGene</bdi>.</p>
+            <ul class="tags" dir="ltr"><li>RNA-seq</li><li>Clustering</li><li>DAVID</li><li>ToppGene</li></ul>
+            <p class="card-link ph"><span data-lang="en">[PLACEHOLDER: project details / link]</span><span data-lang="ar">[عنصر نائب: تفاصيل المشروع أو الرابط]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card-meta"><span data-lang="en">MSc · AUC</span><span data-lang="ar">ماجستير · الجامعة الأمريكية بالقاهرة</span></p>
+            <h3><span data-lang="en">Type 2 diabetes genetic risk score tool</span><span data-lang="ar">أداة درجة الخطر الجيني للسكري من النوع الثاني</span></h3>
+            <p data-lang="en">A Python tool that computes GWAS-based genetic risk scores to model individual predisposition to type 2 diabetes.</p>
+            <p data-lang="ar">أداة مكتوبة بلغة <bdi>Python</bdi> تحسب درجات الخطر الجيني المستندة إلى دراسات الارتباط الجينومي الواسع (<bdi>GWAS</bdi>) لنمذجة قابلية الإصابة بالسكري من النوع الثاني.</p>
+            <ul class="tags" dir="ltr"><li>Python</li><li>GWAS</li><li>Risk modelling</li></ul>
+            <p class="card-link ph"><span data-lang="en">[PLACEHOLDER: GitHub repository link]</span><span data-lang="ar">[عنصر نائب: رابط مستودع <bdi>GitHub</bdi>]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card-meta"><span data-lang="en">Diploma · Cairo University</span><span data-lang="ar">دبلوم · جامعة القاهرة</span></p>
+            <h3><span data-lang="en">SARS-CoV-2 immune biomarker analysis</span><span data-lang="ar">تحليل للمؤشرات المناعية لـ <bdi>SARS-CoV-2</bdi></span></h3>
+            <p data-lang="en">Multi-omics analysis of public RNA-seq data to identify host immune biomarkers of SARS-CoV-2 infection, with KEGG and GO enrichment.</p>
+            <p data-lang="ar">تحليل متعدد الأوميكس لبيانات <bdi>RNA-seq</bdi> العامة لتحديد المؤشرات الحيوية المناعية للعائل عند الإصابة بـ <bdi>SARS-CoV-2</bdi>، مع تحليل الإثراء عبر <bdi>KEGG</bdi> و<bdi>GO</bdi>.</p>
+            <ul class="tags" dir="ltr"><li>RNA-seq</li><li>KEGG</li><li>GO</li></ul>
+            <p class="card-link ph"><span data-lang="en">[PLACEHOLDER: project details / link]</span><span data-lang="ar">[عنصر نائب: تفاصيل المشروع أو الرابط]</span></p>
+          </article>
+
+          <article class="card">
+            <p class="card-meta"><span data-lang="en">MSc · AUC</span><span data-lang="ar">ماجستير · الجامعة الأمريكية بالقاهرة</span></p>
+            <h3><span data-lang="en">E. coli gene annotation &amp; cloning</span><span data-lang="ar">توصيف جينات <bdi>E. coli</bdi> واستنساخها</span></h3>
+            <p data-lang="en">Combined wet-lab and computational workflow: PCR, molecular cloning with blue/white screening, and BLAST-based gene annotation.</p>
+            <p data-lang="ar">سير عمل يجمع بين المعمل والتحليل الحاسوبي: تفاعل البلمرة المتسلسل (<bdi>PCR</bdi>)، والاستنساخ الجزيئي مع الفرز بالأزرق والأبيض، وتوصيف الجينات باستخدام <bdi>BLAST</bdi>.</p>
+            <ul class="tags" dir="ltr"><li>PCR</li><li>Cloning</li><li>BLAST</li></ul>
+          </article>
+
+          <article class="card">
+            <p class="card-meta"><span data-lang="en">BSc · MUST</span><span data-lang="ar">بكالوريوس · جامعة مصر للعلوم والتكنولوجيا</span></p>
+            <h3><span data-lang="en">Antifungal phytochemicals from Sinai plants</span><span data-lang="ar">مركّبات نباتية مضادة للفطريات من نباتات سيناء</span></h3>
+            <p data-lang="en">Isolation and structural characterisation of antifungal plant compounds using chromatography, mass spectrometry and NMR.</p>
+            <p data-lang="ar">عزل مركّبات نباتية مضادة للفطريات وتوصيف تركيبها باستخدام الكروماتوغرافيا ومطياف الكتلة والرنين المغناطيسي النووي (<bdi>NMR</bdi>).</p>
+            <ul class="tags" dir="ltr"><li>Chromatography</li><li>MS</li><li>NMR</li></ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== APPS & TOOLS ============================== -->
+    <section class="section section-alt" id="apps" aria-labelledby="apps-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">04</p>
+          <h2 id="apps-title"><span data-lang="en">Apps &amp; Tools</span><span data-lang="ar">التطبيقات والأدوات</span></h2>
+        </header>
+
+        <p class="section-intro" data-lang="en">I also build software using AI-assisted coding (vibe coding). Three apps and one tool are on the way.</p>
+        <p class="section-intro" data-lang="ar">أطوّر أيضًا برمجيات باستخدام البرمجة بمساعدة الذكاء الاصطناعي (<bdi>vibe coding</bdi>). ثلاثة تطبيقات وأداة واحدة في الطريق.</p>
+
+        <div class="cards cards-4">
+          <article class="card card-soon">
+            <div class="card-badges">
+              <span class="badge"><span data-lang="en">App</span><span data-lang="ar">تطبيق</span></span>
+              <span class="badge badge-soon"><span data-lang="en">Coming soon</span><span data-lang="ar">قريبًا</span></span>
+            </div>
+            <!-- PLACEHOLDER: app 1 title and one-line description -->
+            <h3 class="ph"><span data-lang="en">[PLACEHOLDER: app title]</span><span data-lang="ar">[عنصر نائب: اسم التطبيق]</span></h3>
+            <p class="ph"><span data-lang="en">[PLACEHOLDER: one-line description]</span><span data-lang="ar">[عنصر نائب: وصف في سطر واحد]</span></p>
+          </article>
+          <article class="card card-soon">
+            <div class="card-badges">
+              <span class="badge"><span data-lang="en">App</span><span data-lang="ar">تطبيق</span></span>
+              <span class="badge badge-soon"><span data-lang="en">Coming soon</span><span data-lang="ar">قريبًا</span></span>
+            </div>
+            <!-- PLACEHOLDER: app 2 title and one-line description -->
+            <h3 class="ph"><span data-lang="en">[PLACEHOLDER: app title]</span><span data-lang="ar">[عنصر نائب: اسم التطبيق]</span></h3>
+            <p class="ph"><span data-lang="en">[PLACEHOLDER: one-line description]</span><span data-lang="ar">[عنصر نائب: وصف في سطر واحد]</span></p>
+          </article>
+          <article class="card card-soon">
+            <div class="card-badges">
+              <span class="badge"><span data-lang="en">App</span><span data-lang="ar">تطبيق</span></span>
+              <span class="badge badge-soon"><span data-lang="en">Coming soon</span><span data-lang="ar">قريبًا</span></span>
+            </div>
+            <!-- PLACEHOLDER: app 3 title and one-line description -->
+            <h3 class="ph"><span data-lang="en">[PLACEHOLDER: app title]</span><span data-lang="ar">[عنصر نائب: اسم التطبيق]</span></h3>
+            <p class="ph"><span data-lang="en">[PLACEHOLDER: one-line description]</span><span data-lang="ar">[عنصر نائب: وصف في سطر واحد]</span></p>
+          </article>
+          <article class="card card-soon">
+            <div class="card-badges">
+              <span class="badge"><span data-lang="en">Tool</span><span data-lang="ar">أداة</span></span>
+              <span class="badge badge-soon"><span data-lang="en">Coming soon</span><span data-lang="ar">قريبًا</span></span>
+            </div>
+            <!-- PLACEHOLDER: tool 1 title and one-line description -->
+            <h3 class="ph"><span data-lang="en">[PLACEHOLDER: tool title]</span><span data-lang="ar">[عنصر نائب: اسم الأداة]</span></h3>
+            <p class="ph"><span data-lang="en">[PLACEHOLDER: one-line description]</span><span data-lang="ar">[عنصر نائب: وصف في سطر واحد]</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== WRITING ============================== -->
+    <section class="section" id="writing" aria-labelledby="writing-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">05</p>
+          <h2 id="writing-title"><span data-lang="en">Writing</span><span data-lang="ar">الكتابة</span></h2>
+        </header>
+
+        <p class="section-intro" data-lang="en">Alongside research, I write. Selected pieces will be collected here.</p>
+        <p class="section-intro" data-lang="ar">إلى جانب البحث العلمي، أكتب. ستُجمع هنا مختارات من كتاباتي.</p>
+        <p class="ph section-intro-ph"><span data-lang="en">[PLACEHOLDER: optional sentence on what you write about — topics, formats, languages]</span><span data-lang="ar">[عنصر نائب: جملة اختيارية عن موضوعات كتاباتك وأشكالها ولغاتها]</span></p>
+
+        <div class="cards">
+          <article class="card card-placeholder">
+            <!-- PLACEHOLDER: writing piece 1 -->
+            <p class="card-meta ph"><span data-lang="en">[PLACEHOLDER: type · publication · year]</span><span data-lang="ar">[عنصر نائب: النوع · جهة النشر · السنة]</span></p>
+            <h3 class="ph"><span data-lang="en">[PLACEHOLDER: title]</span><span data-lang="ar">[عنصر نائب: العنوان]</span></h3>
+            <p class="ph"><span data-lang="en">[PLACEHOLDER: one- or two-line summary]</span><span data-lang="ar">[عنصر نائب: ملخص في سطر أو سطرين]</span></p>
+            <p class="card-link ph"><span data-lang="en">[PLACEHOLDER: link]</span><span data-lang="ar">[عنصر نائب: الرابط]</span></p>
+          </article>
+          <article class="card card-placeholder">
+            <!-- PLACEHOLDER: writing piece 2 -->
+            <p class="card-meta ph"><span data-lang="en">[PLACEHOLDER: type · publication · year]</span><span data-lang="ar">[عنصر نائب: النوع · جهة النشر · السنة]</span></p>
+            <h3 class="ph"><span data-lang="en">[PLACEHOLDER: title]</span><span data-lang="ar">[عنصر نائب: العنوان]</span></h3>
+            <p class="ph"><span data-lang="en">[PLACEHOLDER: one- or two-line summary]</span><span data-lang="ar">[عنصر نائب: ملخص في سطر أو سطرين]</span></p>
+            <p class="card-link ph"><span data-lang="en">[PLACEHOLDER: link]</span><span data-lang="ar">[عنصر نائب: الرابط]</span></p>
+          </article>
+          <article class="card card-placeholder">
+            <!-- PLACEHOLDER: writing piece 3 -->
+            <p class="card-meta ph"><span data-lang="en">[PLACEHOLDER: type · publication · year]</span><span data-lang="ar">[عنصر نائب: النوع · جهة النشر · السنة]</span></p>
+            <h3 class="ph"><span data-lang="en">[PLACEHOLDER: title]</span><span data-lang="ar">[عنصر نائب: العنوان]</span></h3>
+            <p class="ph"><span data-lang="en">[PLACEHOLDER: one- or two-line summary]</span><span data-lang="ar">[عنصر نائب: ملخص في سطر أو سطرين]</span></p>
+            <p class="card-link ph"><span data-lang="en">[PLACEHOLDER: link]</span><span data-lang="ar">[عنصر نائب: الرابط]</span></p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================== CONTACT ============================== -->
+    <section class="section section-alt" id="contact" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head">
+          <p class="section-kicker">06</p>
+          <h2 id="contact-title"><span data-lang="en">Contact</span><span data-lang="ar">تواصل</span></h2>
+        </header>
+
+        <p class="contact-intro" data-lang="en">I am open to research and industry roles in bioinformatics and computational biology. The best way to reach me is by email.</p>
+        <p class="contact-intro" data-lang="ar">أرحب بالفرص البحثية والمهنية في مجالي المعلوماتية الحيوية والبيولوجيا الحاسوبية. أفضل وسيلة للتواصل معي هي البريد الإلكتروني.</p>
+
+        <ul class="contact-list">
+          <li>
+            <a class="contact-item" href="mailto:ahmedadelallam@aucegypt.edu">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path d="M3 5h18v14H3z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/><path d="m3 6 9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/></svg>
+              <span class="ci-label"><span data-lang="en">Email</span><span data-lang="ar">البريد الإلكتروني</span></span>
+              <span class="ci-value" dir="ltr">ahmedadelallam@aucegypt.edu</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-item" href="https://www.linkedin.com/in/ahmed-a-allam97/" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4v11H3zm6.5 0h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1v5.35h-4v-4.74c0-1.13-.02-2.59-1.58-2.59-1.58 0-1.82 1.23-1.82 2.5v4.83h-4z"/></svg>
+              <span class="ci-label">LinkedIn</span>
+              <span class="ci-value" dir="ltr">in/ahmed-a-allam97</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-item" href="https://github.com/ahmed-a-allam" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-3.16 19.49c.5.09.68-.22.68-.48v-1.7c-2.78.6-3.37-1.34-3.37-1.34-.45-1.16-1.11-1.47-1.11-1.47-.91-.62.07-.6.07-.6 1 .07 1.53 1.03 1.53 1.03.9 1.52 2.34 1.08 2.91.83.09-.65.35-1.09.63-1.34-2.22-.25-4.55-1.11-4.55-4.94 0-1.09.39-1.98 1.03-2.68-.1-.25-.45-1.27.1-2.64 0 0 .84-.27 2.75 1.02a9.56 9.56 0 0 1 5 0c1.91-1.29 2.75-1.02 2.75-1.02.55 1.37.2 2.39.1 2.64.64.7 1.03 1.59 1.03 2.68 0 3.84-2.34 4.68-4.57 4.93.36.31.68.92.68 1.85v2.74c0 .27.18.58.69.48A10 10 0 0 0 12 2z"/></svg>
+              <span class="ci-label">GitHub</span>
+              <span class="ci-value" dir="ltr">ahmed-a-allam</span>
+            </a>
+          </li>
+          <li>
+            <a class="contact-item" href="https://orcid.org/0009-0001-4143-9496" target="_blank" rel="noopener">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9.2" fill="none" stroke="currentColor" stroke-width="1.8"/><path fill="currentColor" d="M8.2 10h1.6v7H8.2zM9 6.8a1 1 0 1 1 0 2 1 1 0 0 1 0-2zm2.4 3.2h2.7c2.4 0 3.7 1.6 3.7 3.5S16.4 17 14.1 17h-2.7zm1.6 1.4v4.2h1c1.4 0 2.2-.9 2.2-2.1s-.8-2.1-2.2-2.1z"/></svg>
+              <span class="ci-label">ORCID</span>
+              <span class="ci-value" dir="ltr">0009-0001-4143-9496</span>
+            </a>
+          </li>
+          <li>
+            <!-- PLACEHOLDER: replace this <div> with an <a class="contact-item" href="https://scholar.google.com/citations?user=..."> once the profile exists -->
+            <div class="contact-item ph">
+              <svg aria-hidden="true" viewBox="0 0 24 24"><path fill="currentColor" d="M12 3 1 9.5l4 2.36V17c0 1.66 3.13 3 7 3s7-1.34 7-3v-5.14l2-1.18V16h2V9.5zm0 2.3 7.06 4.2L12 13.7 4.94 9.5z"/></svg>
+              <span class="ci-label">Google Scholar</span>
+              <span class="ci-value"><span data-lang="en">[PLACEHOLDER: profile link]</span><span data-lang="ar">[عنصر نائب: رابط الملف]</span></span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>
+        <span data-lang="en">© 2026 Ahmed Adel Allam</span><span data-lang="ar">© 2026 أحمد عادل علّام</span>
+      </p>
+      <p>
+        <span data-lang="en">Last updated November 2026</span><span data-lang="ar">آخر تحديث: نوفمبر 2026</span>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var root = document.documentElement;
+
+      /* ---------- Theme switcher ---------- */
+      var THEMES = ["light", "dark", "sepia", "ocean", "contrast"];
+      var NAMES = {
+        en: { light: "Light", dark: "Dark", sepia: "Sepia", ocean: "Ocean", contrast: "High Contrast" },
+        ar: { light: "فاتح", dark: "داكن", sepia: "سيبيا", ocean: "المحيط", contrast: "تباين عالٍ" }
+      };
+      var themeBtn = document.getElementById("theme-toggle");
+      var menu = document.getElementById("theme-menu");
+      var items = Array.prototype.slice.call(menu.querySelectorAll("[data-theme-value]"));
+      var meta = document.querySelector('meta[name="theme-color"]');
+      var chosen = false;
+      try { chosen = THEMES.indexOf(localStorage.getItem("theme")) > -1; } catch (e) {}
+
+      function lang() { return root.lang === "ar" ? "ar" : "en"; }
+      function current() { return root.getAttribute("data-theme") || "light"; }
+
+      function labelTheme() {
+        var name = NAMES[lang()][current()];
+        var label = lang() === "ar" ? "السمة: " + name + ". تغيير السمة" : "Theme: " + name + ". Change theme";
+        themeBtn.setAttribute("aria-label", label);
+        themeBtn.setAttribute("title", label);
+        menu.setAttribute("aria-label", lang() === "ar" ? "السمة" : "Theme");
+      }
+
+      function setTheme(t, remember) {
+        if (THEMES.indexOf(t) < 0) { return; }
+        root.setAttribute("data-theme", t);
+        items.forEach(function (it) {
+          it.setAttribute("aria-checked", String(it.getAttribute("data-theme-value") === t));
+        });
+        if (meta) { meta.setAttribute("content", getComputedStyle(root).getPropertyValue("--bg").trim()); }
+        if (remember) {
+          chosen = true;
+          try { localStorage.setItem("theme", t); } catch (e) {}
+        }
+        labelTheme();
+      }
+
+      function openMenu(focusIndex) {
+        menu.hidden = false;
+        themeBtn.setAttribute("aria-expanded", "true");
+        var i = typeof focusIndex === "number" ? focusIndex : THEMES.indexOf(current());
+        items[(i + items.length) % items.length].focus();
+      }
+      function closeMenu(returnFocus) {
+        if (menu.hidden) { return; }
+        menu.hidden = true;
+        themeBtn.setAttribute("aria-expanded", "false");
+        if (returnFocus) { themeBtn.focus(); }
+      }
+
+      themeBtn.addEventListener("click", function () {
+        if (menu.hidden) { openMenu(); } else { closeMenu(true); }
+      });
+      themeBtn.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowDown") { e.preventDefault(); openMenu(); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); openMenu(items.length - 1); }
+      });
+      menu.addEventListener("keydown", function (e) {
+        var i = items.indexOf(document.activeElement);
+        if (e.key === "ArrowDown") { e.preventDefault(); items[(i + 1) % items.length].focus(); }
+        else if (e.key === "ArrowUp") { e.preventDefault(); items[(i - 1 + items.length) % items.length].focus(); }
+        else if (e.key === "Home") { e.preventDefault(); items[0].focus(); }
+        else if (e.key === "End") { e.preventDefault(); items[items.length - 1].focus(); }
+        else if (e.key === "Escape") { e.preventDefault(); closeMenu(true); }
+        else if (e.key === "Tab") { closeMenu(false); }
+      });
+      items.forEach(function (it) {
+        it.addEventListener("click", function () {
+          setTheme(it.getAttribute("data-theme-value"), true);
+          closeMenu(true);
+        });
+      });
+      document.addEventListener("click", function (e) {
+        if (!menu.hidden && !e.target.closest(".theme-switcher")) { closeMenu(false); }
+      });
+
+      /* Follow the device setting until the visitor picks a theme */
+      if (window.matchMedia) {
+        var mq = window.matchMedia("(prefers-color-scheme: dark)");
+        var onChange = function (e) { if (!chosen) { setTheme(e.matches ? "dark" : "light", false); } };
+        if (mq.addEventListener) { mq.addEventListener("change", onChange); }
+        else if (mq.addListener) { mq.addListener(onChange); }
+      }
+
+      /* ---------- Language toggle: swaps html[lang] and html[dir]; CSS shows the matching [data-lang] content ---------- */
+      var langBtn = document.getElementById("lang-toggle");
+      var titles = {
+        en: "Ahmed Adel Allam — Bioinformatics Researcher",
+        ar: "أحمد عادل علّام — باحث في المعلوماتية الحيوية"
+      };
+      var langLabels = {
+        en: "عرض الموقع باللغة العربية",
+        ar: "View the site in English"
+      };
+
+      function applyLang(l) {
+        root.lang = l;
+        root.dir = l === "ar" ? "rtl" : "ltr";
+        document.title = titles[l];
+        langBtn.setAttribute("aria-label", langLabels[l]);
+        try { localStorage.setItem("lang", l); } catch (e) {}
+        labelTheme();
+      }
+
+      setTheme(current(), false);
+      applyLang(lang());
+      langBtn.addEventListener("click", function () {
+        applyLang(lang() === "ar" ? "en" : "ar");
+      });
+    })();
+  </script>
+</body>
+</html>

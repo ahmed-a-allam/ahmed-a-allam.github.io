@@ -1,0 +1,3 @@
+# Keep personal documents (CVs, IDs, etc.) out of the public repo
+*.docx
+*.doc
