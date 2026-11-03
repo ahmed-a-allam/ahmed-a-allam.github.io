@@ -532,3 +532,6 @@ html[lang="ar"] .badge { letter-spacing: 0; font-size: .82rem; }
 :root[data-theme="contrast"] .contact-item,
 :root[data-theme="contrast"] .pub-list li { border-width: 2px; }
 :root[data-theme="contrast"] .ph { border-width: 2px; }
+
+/* Tool card actions */
+.card .card-link .btn { padding: 8px 16px; font-size: .9rem; margin-inline-end: 8px; }
