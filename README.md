@@ -15,13 +15,7 @@ Every translatable piece of text exists twice, marked `data-lang="en"` and `data
 The header button switches `<html lang>` / `<html dir>` and CSS hides the other language.
 The choice is remembered in `localStorage`.
 
-## Placeholders to fill in
+## Content notes
 
-Search for `PLACEHOLDER` (or the `ph` class) in `index.html`. Currently:
-
-- Google Scholar profile link (Research section and Contact section)
-- Project repository / details links (HDAC1, T2D risk score, SARS-CoV-2)
-- Apps & Tools: title and one-line description for 3 apps and 1 tool (cards show "Coming soon"; add links when ready)
-- Writing: optional intro sentence, plus type/publication/year, title, summary and link for 3 pieces
-
-Update both the English and Arabic version of each placeholder.
+- Publications show a neutral "Co-author" label (EN) / "مؤلف مشارك" (AR) instead of the author order. Titles are the published titles.
+- There are no visible placeholder boxes. When the Google Scholar profile, project links, apps, tools or writing pieces are ready, add them to `index.html` in both English and Arabic.
