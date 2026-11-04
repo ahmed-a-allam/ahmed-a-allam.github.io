@@ -16,7 +16,7 @@
        Storage access is wrapped in try/catch so the page still works when storage is blocked. */
     (function () {
       var d = document.documentElement, t = null, l = null;
-      var colors = { light: "#ffffff", dark: "#0d1418", sepia: "#f5ecd7", ocean: "#06202c", contrast: "#ffffff" };
+      var colors = { light: "#ffffff", dark: "#0d1418", sepia: "#f5ecd7", ocean: "#06202c", olive: "#161b0f", contrast: "#ffffff" };
       try { t = localStorage.getItem("theme"); } catch (e) {}
       try { l = localStorage.getItem("lang"); } catch (e) {}
       if (!colors.hasOwnProperty(t)) {
@@ -105,6 +105,13 @@
               <button type="button" role="menuitemradio" aria-checked="false" data-theme-value="ocean" tabindex="-1">
                 <span class="swatch swatch-ocean" aria-hidden="true"></span>
                 <span class="tm-label"><span data-lang="en">Ocean</span><span data-lang="ar">المحيط</span></span>
+                <svg class="tm-check" aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </button>
+            </li>
+            <li role="none">
+              <button type="button" role="menuitemradio" aria-checked="false" data-theme-value="olive" tabindex="-1">
+                <span class="swatch swatch-olive" aria-hidden="true"></span>
+                <span class="tm-label"><span data-lang="en">Olive</span><span data-lang="ar">زيتوني</span></span>
                 <svg class="tm-check" aria-hidden="true" viewBox="0 0 24 24"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
               </button>
             </li>
@@ -506,10 +513,10 @@
       var root = document.documentElement;
 
       /* ---------- Theme switcher ---------- */
-      var THEMES = ["light", "dark", "sepia", "ocean", "contrast"];
+      var THEMES = ["light", "dark", "sepia", "ocean", "olive", "contrast"];
       var NAMES = {
-        en: { light: "Light", dark: "Dark", sepia: "Sepia", ocean: "Ocean", contrast: "High Contrast" },
-        ar: { light: "فاتح", dark: "داكن", sepia: "سيبيا", ocean: "المحيط", contrast: "تباين عالٍ" }
+        en: { light: "Light", dark: "Dark", sepia: "Sepia", ocean: "Ocean", olive: "Olive", contrast: "High Contrast" },
+        ar: { light: "فاتح", dark: "داكن", sepia: "سيبيا", ocean: "المحيط", olive: "زيتوني", contrast: "تباين عالٍ" }
       };
       var themeBtn = document.getElementById("theme-toggle");
       var menu = document.getElementById("theme-menu");

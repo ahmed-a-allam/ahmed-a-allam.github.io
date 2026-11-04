@@ -139,6 +139,30 @@
   color-scheme: dark;
 }
 
+/* Olive — dark olive green */
+:root[data-theme="olive"] {
+  --bg: #161b0f;
+  --bg-alt: #1c2214;
+  --surface: #222a18;
+  --text: #eef1e1;
+  --muted: #b9c19f;
+  --border: #3c4729;
+  --accent: #b8c76b;
+  --accent-strong: #dfe8ad;
+  --accent-soft: #2f3a1d;
+  --btn-bg: #b8c76b;
+  --btn-bg-hover: #dfe8ad;
+  --btn-text: #161b0f;
+  --ph-bg: #2e2a12;
+  --ph-border: #c9a63a;
+  --ph-text: #f2dc90;
+  --focus: #b8c76b;
+  --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 8px 24px rgba(0, 0, 0, .3);
+  --shadow-menu: 0 12px 32px rgba(0, 0, 0, .55);
+  --hero-glow: var(--accent-soft);
+  color-scheme: dark;
+}
+
 /* High Contrast — black and white, WCAG AAA text contrast */
 :root[data-theme="contrast"] {
   --bg: #ffffff;
@@ -519,6 +543,7 @@ html[lang="ar"] .badge { letter-spacing: 0; font-size: .82rem; }
 .swatch-dark     { --sw-bg: #0d1418; --sw-accent: #5cc3d4; }
 .swatch-sepia    { --sw-bg: #f5ecd7; --sw-accent: #86400f; }
 .swatch-ocean    { --sw-bg: #06202c; --sw-accent: #5ad6cf; }
+.swatch-olive    { --sw-bg: #161b0f; --sw-accent: #b8c76b; }
 .swatch-contrast { --sw-bg: #ffffff; --sw-accent: #000000; }
 
 /* ---------- High Contrast extras: heavier borders and underlines ---------- */
