@@ -581,7 +581,7 @@ html[lang="ar"] .badge { letter-spacing: 0; font-size: .82rem; }
 .card .card-link .btn { padding: 8px 16px; font-size: .9rem; margin-inline-end: 8px; }
 
 /* App teaser cards (logo + short line + "Coming soon") */
-.card .app-logo { width: 56px; height: 56px; object-fit: contain; border-radius: 12px; margin-bottom: 14px; }
+.card .app-logo { width: 72px; height: 72px; object-fit: contain; border-radius: 14px; margin-bottom: 14px; background: #fff; padding: 4px; border: 1px solid var(--border); }
 .card .badge-soon {
   display: inline-block; font-size: .75rem; font-weight: 600; padding: 3px 10px;
   border: 1px solid var(--border); border-radius: 999px; color: var(--muted); background: var(--bg-alt);
