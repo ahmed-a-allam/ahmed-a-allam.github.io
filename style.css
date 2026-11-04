@@ -35,6 +35,8 @@
   --ph-border: #b8860b;
   --ph-text: #6e4d00;
   --focus: #0f6b7d;
+  --logo-from: #02c7b2;
+  --logo-to: #003577;
   --shadow: 0 1px 2px rgba(15, 61, 76, .06), 0 8px 24px rgba(15, 61, 76, .06);
   --shadow-menu: 0 12px 32px rgba(15, 61, 76, .16);
   --hero-glow: var(--accent-soft);
@@ -60,6 +62,8 @@
     --ph-border: #c99a2e;
     --ph-text: #f1d48a;
     --focus: #5cc3d4;
+    --logo-from: #3fd6c4;
+    --logo-to: #8ab4f8;
     --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
     --shadow-menu: 0 12px 32px rgba(0, 0, 0, .5);
     --hero-glow: var(--accent-soft);
@@ -85,6 +89,8 @@
   --ph-border: #c99a2e;
   --ph-text: #f1d48a;
   --focus: #5cc3d4;
+  --logo-from: #3fd6c4;
+  --logo-to: #8ab4f8;
   --shadow: 0 1px 2px rgba(0, 0, 0, .3), 0 8px 24px rgba(0, 0, 0, .25);
   --shadow-menu: 0 12px 32px rgba(0, 0, 0, .5);
   --hero-glow: var(--accent-soft);
@@ -109,6 +115,8 @@
   --ph-border: #9a6a08;
   --ph-text: #553700;
   --focus: #86400f;
+  --logo-from: #b0651a;
+  --logo-to: #5a2a08;
   --shadow: 0 1px 2px rgba(90, 42, 8, .07), 0 8px 24px rgba(90, 42, 8, .08);
   --shadow-menu: 0 12px 32px rgba(90, 42, 8, .18);
   --hero-glow: var(--accent-soft);
@@ -133,6 +141,8 @@
   --ph-border: #d4a83e;
   --ph-text: #f5dc92;
   --focus: #5ad6cf;
+  --logo-from: #5ad6cf;
+  --logo-to: #7cc4ff;
   --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 8px 24px rgba(0, 0, 0, .3);
   --shadow-menu: 0 12px 32px rgba(0, 0, 0, .55);
   --hero-glow: var(--accent-soft);
@@ -157,6 +167,8 @@
   --ph-border: #c9a63a;
   --ph-text: #f2dc90;
   --focus: #b8c76b;
+  --logo-from: #8fae4a;
+  --logo-to: #dfe8ad;
   --shadow: 0 1px 2px rgba(0, 0, 0, .35), 0 8px 24px rgba(0, 0, 0, .3);
   --shadow-menu: 0 12px 32px rgba(0, 0, 0, .55);
   --hero-glow: var(--accent-soft);
@@ -181,6 +193,8 @@
   --ph-border: #000000;
   --ph-text: #000000;
   --focus: #c4002b;
+  --logo-from: #000000;
+  --logo-to: #000000;
   --shadow: none;
   --shadow-menu: 0 0 0 2px #000000;
   --hero-glow: transparent;
@@ -239,10 +253,15 @@ p { margin: 0 0 1em; }
 .header-inner { display: flex; align-items: center; gap: 24px; min-height: 68px; }
 
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-weight: 600; }
-.brand-mark {
-  display: grid; place-items: center; width: 38px; height: 38px; border-radius: 10px;
-  background: var(--btn-bg); color: var(--btn-text); font-size: .85rem; font-weight: 700; letter-spacing: .02em;
-  font-family: var(--font-en);
+/* Logo: the shape comes from logo-mask.png, the colors from the active theme */
+.brand-logo {
+  display: block; flex: none; height: 40px; aspect-ratio: 236 / 192;
+  background: linear-gradient(to top right, var(--logo-from) 10%, var(--logo-to) 90%);
+  -webkit-mask: url("logo-mask.png") center / contain no-repeat;
+  mask: url("logo-mask.png") center / contain no-repeat;
+}
+@media (forced-colors: active) {
+  .brand-logo { forced-color-adjust: none; background: CanvasText; }
 }
 
 .site-nav { display: flex; gap: 4px; margin-inline-start: auto; }
