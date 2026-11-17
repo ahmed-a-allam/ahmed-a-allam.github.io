@@ -35,8 +35,8 @@
   --ph-border: #b8860b;
   --ph-text: #6e4d00;
   --focus: #0f6b7d;
-  --logo-from: #02c7b2;
-  --logo-to: #003577;
+  --logo-from: #00b3a9;
+  --logo-to: #022751;
   --shadow: 0 1px 2px rgba(15, 61, 76, .06), 0 8px 24px rgba(15, 61, 76, .06);
   --shadow-menu: 0 12px 32px rgba(15, 61, 76, .16);
   --hero-glow: var(--accent-soft);
@@ -255,8 +255,8 @@ p { margin: 0 0 1em; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; color: var(--text); font-weight: 600; }
 /* Logo: the shape comes from logo-mask.png, the colors from the active theme */
 .brand-logo {
-  display: block; flex: none; height: 40px; aspect-ratio: 236 / 192;
-  background: linear-gradient(to top right, var(--logo-from) 10%, var(--logo-to) 90%);
+  display: block; flex: none; height: 40px; aspect-ratio: 244 / 192;
+  background: linear-gradient(to top right, var(--logo-from) 8%, var(--logo-to) 62%);
   -webkit-mask: url("logo-mask.png") center / contain no-repeat;
   mask: url("logo-mask.png") center / contain no-repeat;
 }
